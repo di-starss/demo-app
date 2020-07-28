@@ -1,0 +1,32 @@
+---
+- hosts: localhost
+
+  tasks:
+    - debug: var=secret
+    - debug: var=project
+    - debug: var=vm
+    - debug: var=vms
+    - debug: var=net
+    - debug: var=tmp
+    - debug: var=cluster_meta
+    - debug: var=project_meta
+    - debug: var=job_meta
+    
+        
+    - name: "tmp write: www_install_{{ vm.host }} -> true"
+      grizzly_tmp:
+        write:
+          key: "deploy_{{ vm.host }}"
+          value: "true"
+
+    - name: "echo: deploy"
+      grizzly_echo:
+        job: "demo-app/deploy"
+        message: "app deploy: ver -> {{ job_meta.app }}"
+        
+
+    - name: "deploy"
+      template:
+        src: deploy.j2
+        dest: /var/www/html/index.nginx-debian.html
+        
