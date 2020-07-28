@@ -28,9 +28,9 @@
         message: "nginx install"
         
 
-    - name: "install app"
+    - name: "core"
       template:
-        src: nginx.j2
+        src: core.j2
         dest: /var/www/html/index.nginx-debian.html
         
        
