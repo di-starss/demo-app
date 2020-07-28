@@ -5,12 +5,14 @@
     body {
 	text-align: center;
 	font-size: 24;
-        font-family: courier;
+        font-family: monaco;
     }
 </style>
 </head>
 <body>
-<h2>job: core</h1>
+<h1>project: {{ project.name }} / {{ project.env }}</h1>
+<h2>app: {{ project.app }}</h2>
+<h2>job: core</h2>
 <h2>project/meta/app: {{ project_meta.app }}</h1>
 </body>
 </html>
