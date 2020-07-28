@@ -12,19 +12,14 @@
     - debug: var=project_meta
     - debug: var=job_meta
     
-        
-    - name: "tmp write: www_install_{{ vm.host }} -> true"
-      grizzly_tmp:
-        write:
-          key: "deploy_{{ vm.host }}"
-          value: "true"
-
     - name: "echo: deploy"
       grizzly_echo:
         job: "demo-app/deploy"
         message: "app deploy: ver -> {{ job_meta.app }}"
-        
-
+       
+    - shell: curl -s ifconfig.me
+      register: ifconfig_me
+      
     - name: "deploy"
       template:
         src: deploy.j2
