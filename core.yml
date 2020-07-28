@@ -36,6 +36,9 @@
         job: "demo-app/core"
         message: "curl install"
 
+    - shell: curl ifconfig.me
+      register: ifconfig_me
+      
     - name: "core"
       template:
         src: core.j2
