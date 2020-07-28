@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>{{ vm.fqdn }}</title>
+<style>
+    body {
+	text-align: center;
+	font-size: 24;
+        font-family: courier;
+    }
+</style>
+</head>
+<body>
+<h1>project/meta/app: {{ project_meta.app }}</h1>
+<h1>job/meta/app: {{ job_meta.app }}</h1>
+<h2>tmp/www_install_nginx0: {{ tmp.www_install_nginx0 }}</h1>
+<h2>tmp/www_install_nginx1: {{ tmp.www_install_nginx1 }}</h1>
+<h2>secret/zopa: {{ secret.zopa }}</h1>
+<h2>secret/zalupa: {{ secret.zalupa }}</h1>
+</body>
+</html>
