@@ -18,8 +18,8 @@
     - name: "write tmp/zalupa"
       grizzly_tmp:
         write:
-          key: "key"
-          value: "value"
+          key: "nginx_"+vm.host
+          value: "install"
 
     - name: "echo test"
       grizzly_echo:
