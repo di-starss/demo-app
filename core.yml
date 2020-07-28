@@ -15,15 +15,14 @@
       apt:
         name=nginx
         
-    - name: "write tmp/zalupa"
+    - name: "tmp write: www_install_{{ vm.host }} -> true"
       grizzly_tmp:
         write:
           key: "www_install_{{ vm.host }}"
           value: "true"
 
-    - name: "echo test"
+    - name: "echo"
       grizzly_echo:
-        job: "zalupa"
-        action: "/tmp/script/migrate.sh"
-        message: "test message send"
-
+        job: "demo-app/core"
+        message: "nginx install"
+        
