@@ -1,0 +1,25 @@
+---
+- hosts: localhost
+
+  tasks:
+    - debug: var=secret
+    - debug: var=project
+    - debug: var=vm
+    - debug: var=vms
+    - debug: var=net
+    - debug: var=tmp
+    - debug: var=cluster_meta
+    - debug: var=job_meta
+    
+    - name: "write tmp/zalupa"
+      grizzly_tmp:
+        write:
+          key: "key"
+          value: "value"
+
+    - name: "echo test"
+      grizzly_echo:
+        job: "zalupa"
+        action: "/tmp/script/migrate.sh"
+        message: "test message send"
+
