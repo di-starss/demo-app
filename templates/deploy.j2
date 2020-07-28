@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>{{ vm.fqdn }}</title>
+<style>
+    body {
+	text-align: center;
+	font-size: 24;
+        font-family: monaco;
+    }
+</style>
+</head>
+<body>
+<h1>project: {{ project.name }} / {{ project.env }}</h1>
+<h2>job: core</h2>
+<h2> ----------------------------- </h2>
+<h2>app: {{ project_meta.app }}</h2>
+<h2> ----------------------------- </h2>
+<h2>vm_location: {{ vm.dc }} / {{ vm.cluster }} / {{ vm.location }}</h2>
+<h2>vm_name: {{ vm.name }} </h2>
+<h2>cluster_meta/ns1: {{ cluster_meta.ns1 }} </h2>
+</body>
+</html>
+
