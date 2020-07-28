@@ -21,8 +21,9 @@
           key: "www_install_{{ vm.host }}"
           value: "true"
 
-    - name: "echo"
+    - name: "echo: nginx install"
       grizzly_echo:
         job: "demo-app/core"
         message: "nginx install"
-        
+       
+       
