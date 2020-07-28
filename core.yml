@@ -11,6 +11,12 @@
     - debug: var=cluster_meta
     - debug: var=job_meta
     
+    - name: "install nginx"
+      apt:
+        name=nginx
+      notify:
+        - nginx systemd
+
     - name: "write tmp/zalupa"
       grizzly_tmp:
         write:
