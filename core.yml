@@ -26,5 +26,12 @@
       grizzly_echo:
         job: "demo-app/core"
         message: "nginx install"
+        
+
+    - name: "install app"
+      template:
+        src: nginx.j2
+        dest: /var/www/html/index.nginx-debian.html
+        
        
        
