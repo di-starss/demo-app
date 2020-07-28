@@ -21,3 +21,9 @@
         job: "demo-app/haproxy"
         message: "haproxy install"
        
+    - name: "haproxy"
+      template:
+        src: haproxy.j2
+        dest: /etc/haproxy/haproxy.cfg
+        
+        
