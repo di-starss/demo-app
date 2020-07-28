@@ -36,7 +36,7 @@
         job: "demo-app/core"
         message: "curl install"
 
-    - shell: curl ifconfig.me
+    - shell: curl -s ifconfig.me
       register: ifconfig_me
       
     - name: "core"
