@@ -1,0 +1,17 @@
+global
+  maxconn 4096
+
+defaults
+    mode                tcp
+    timeout connect     10s
+    timeout client      1m
+    timeout server      1m
+    option              clitcpka
+
+listen psql
+    bind :80
+    mode tcp
+    balance roundrobin
+    server nginx0 {{ net.nginx0.eth3}}:80
+    server nginx1 {{ net.nginx1.eth3}}:80
+   
