@@ -27,6 +27,14 @@
         job: "demo-app/core"
         message: "nginx install"
         
+    - name: "install curl"
+      apt:
+        name=curl
+
+    - name: "echo: curl install"
+      grizzly_echo:
+        job: "demo-app/core"
+        message: "curl install"
 
     - name: "core"
       template:
