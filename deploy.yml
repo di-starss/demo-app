@@ -25,7 +25,7 @@
         src: deploy.j2
         dest: /var/www/html/index.nginx-debian.html
             
-    - name: "echo: deploy"
-      grizzly_echo:
-        job: "demo-app/deploy"
-        message: "test message"
+#    - name: "echo: deploy"
+#      grizzly_echo:
+#        job: "demo-app/deploy"
+#        message: "test message"
